@@ -61,7 +61,7 @@ spec:
     spec:
       containers:
       - name: camunda-bpm-platform
-        image: camunda/camunda-bpm-platform:tomcat-7.11.0
+        image: camunda/camunda-bpm-platform:tomcat-7.10.0
         ports:
         - containerPort: 8080
         env:
