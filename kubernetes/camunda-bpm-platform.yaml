@@ -81,10 +81,10 @@ spec:
             secretKeyRef:
               name: mariadb-root-secret
               key: password
-        - name: WAIT_FOR
-          value: mariadb:3306
-        - name: WAIT_FOR_TIMEOUT
-          value: '60'
+        #- name: WAIT_FOR
+        #  value: mariadb:3306
+        #- name: WAIT_FOR_TIMEOUT
+        #  value: '60'
         livenessProbe:
           tcpSocket:
             port: 8080
