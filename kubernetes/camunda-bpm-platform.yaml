@@ -64,12 +64,12 @@ spec:
         image: camunda/camunda-bpm-platform:tomcat-7.10.0
         ports:
         - containerPort: 8080
-        #env:
-        #- name: ApiKey
-        #  valueFrom:
-        #    secretKeyRef:
-        #      name: camunda-bpm-platform-apikey-secret
-        #      key: apikey
+        env:
+        - name: ApiKey
+          valueFrom:
+            secretKeyRef:
+              name: camunda-bpm-platform-apikey-secret
+              key: apikey
         #- name: DB_DRIVER
         #  value: 'com.mysql.jdbc.Driver'
         #- name: DB_URL
