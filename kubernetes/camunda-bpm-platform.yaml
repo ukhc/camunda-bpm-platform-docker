@@ -64,23 +64,23 @@ spec:
         image: camunda/camunda-bpm-platform:tomcat-7.10.0
         ports:
         - containerPort: 8080
-        env:
-        - name: ApiKey
-          valueFrom:
-            secretKeyRef:
-              name: camunda-bpm-platform-apikey-secret
-              key: apikey
-        - name: DB_DRIVER
-          value: 'com.mysql.jdbc.Driver'
-        - name: DB_URL
-          value: 'jdbc:mysql://mariadb:3306/camunda'
-        - name: DB_USERNAME
-          value: root
-        - name: DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mariadb-root-secret
-              key: password
+        #env:
+        #- name: ApiKey
+        #  valueFrom:
+        #    secretKeyRef:
+        #      name: camunda-bpm-platform-apikey-secret
+        #      key: apikey
+        #- name: DB_DRIVER
+        #  value: 'com.mysql.jdbc.Driver'
+        #- name: DB_URL
+        #  value: 'jdbc:mysql://mariadb:3306/camunda'
+        #- name: DB_USERNAME
+        #  value: root
+        #- name: DB_PASSWORD
+        #  valueFrom:
+        #    secretKeyRef:
+        #      name: mariadb-root-secret
+        #      key: password
         #- name: WAIT_FOR
         #  value: mariadb:3306
         #- name: WAIT_FOR_TIMEOUT
